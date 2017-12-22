@@ -275,6 +275,8 @@ class Router {
 						$arr = array('content' => $func($a));
 					}
 				}
+
+				$arr = array('content' => '', 'replace' => false);
 				call_hooks(\App::$module . '_mod_aftercontent', $arr);
 				\App::$page['content'] .= $arr['content'];
 			}
